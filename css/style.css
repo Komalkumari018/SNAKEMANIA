@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url(../images/background_image.jpg);
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#board{
+    background: linear-gradient(rgb(180, 226, 180),rgb(241, 241, 166));
+    width: 90vmin;
+    height: 92vmin;
+    border: 5px solid black;
+    display: grid;
+    /* 18 rows and 18 columns are created on the board  */
+    grid-template-columns: repeat(18 ,1fr);
+    grid-template-rows: repeat(18 ,1fr) ;
+}
+
+#score{
+    position: absolute;
+    top:15px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Syne Mono', monospace;
+}
+#level
+{
+    position: absolute;
+    top:65px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Syne Mono', monospace;
+}
+#highscore{
+    position: absolute;
+    top:165px;
+    right: 30px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Syne Mono', monospace;
+}
+.snake_head{
+    border: .25vmin solid black;
+    background: linear-gradient(rgb(250, 94, 94),rgb(247, 188, 78));
+    border-radius: 10px;
+    transform: scale(1.02);
+}
+.snake_body{
+    /* this border radius is very nice  */
+    border: .25vmin solid black;
+    background: linear-gradient(rgb(77, 131, 77), rgb(235, 245, 104));
+    border-radius: 50px;
+}
+
+.food{
+    border: .25vmin solid black;
+    background: linear-gradient(rgb(236, 137, 236),rgb(226, 149, 162));
+    border-radius: 10px; 
+   
+}
